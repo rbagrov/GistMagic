@@ -24,16 +24,22 @@ class Gister(Magics):
         Upload code to gist
 
         Usage:\\
-            %gister N GitHub_Token
+            %gister -N GitHub_Token
 
-        The argument N is representing the last N In/Out sequences
+        The argument -N is representing the last N In/Out sequences
         """
         if not self.token:
             print("\nPlease add token and reload: %reload_ext gister <github_token>")
             return
 
         try:
-            n = int(line)
+            assert line.startswith("-")
+        except AssertionError:
+            print("\nMissing - before the amount of lines to extract. Ex. %gister -10")
+            return
+
+        try:
+            n = int(line.lstrip("-"))
         except ValueError:
             print("\nLines need to be integer.")
             return
@@ -63,4 +69,4 @@ class Gister(Magics):
             print(f"\n{gist.html_url}\n")
             return
         except github.BadCredentialsException:
-            print("\n Bad GitHub credentials")
+            print("\n The provided Gist token failed to authenticate with GutHub")
