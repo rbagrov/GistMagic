@@ -24,9 +24,10 @@ class Gister(Magics):
         Upload code to gist
 
         Usage:\\
-            %gister -N GitHub_Token
+            %load_ext gister
+            %gister -X  (%gister -5 / %gister -25)
 
-        The argument -N is representing the last N In/Out sequences
+        The argument -X is representing the last X In/Out sequences
         """
         if not self.token:
             print("\nPlease add token and reload: %reload_ext gister <github_token>")
