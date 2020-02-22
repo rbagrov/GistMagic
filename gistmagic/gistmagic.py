@@ -7,9 +7,9 @@ import github
 
 
 @magics_class
-class Gister(Magics):
+class GistMagic(Magics):
     def __init__(self, shell, token=None):
-        super(Gister, self).__init__(shell)
+        super(GistMagic, self).__init__(shell)
 
         if not token:
             print("\nError! Please add token. -> https://github.com/settings/tokens")
@@ -17,24 +17,24 @@ class Gister(Magics):
         self.token = token
 
     @line_magic
-    def gist_magic(self, line):
+    def gistmagic(self, line):
         """
         Upload code to gist
 
         Usage:\\
-            %load_ext gist_magic
-            %gist_magic -X  (%gist_magic -5 / %gist_magic -25)
+            %load_ext gistmagic
+            %gistmagic -X  (%gistmagic -5 / %gistmagic -25)
 
         The argument -X is representing the last X In/Out sequences
         """
         if not self.token:
-            print("\nPlease add token and reload: %reload_ext gist_magic")
+            print("\nPlease add token and reload: %reload_ext gistmagic")
             return
 
         try:
             assert line.startswith("-")
         except AssertionError:
-            print("\nMissing - before the amount of lines to extract. Ex. %gist_magic -10")
+            print("\nMissing - before the amount of lines to extract. Ex. %gistmagic -10")
             return
 
         try:

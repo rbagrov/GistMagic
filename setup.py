@@ -10,7 +10,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 
 setup(
-    name='gist_magic',
+    name='gistmagic',
     version='0.0.1',
     description='History to Gist - line magic for Ipython',
     long_description=long_description,
@@ -18,6 +18,8 @@ setup(
     url='https://github.com/rbagrov/GistMagic',
     author='Rostislav Bagrov',
     author_email='bagrov.rostislav@gmail.com',
+    packages=find_packages(),
+    license='MIT',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
@@ -30,5 +32,5 @@ setup(
         'Programming Language :: Python :: 3.8',
     ],
     keywords='ipython gist magic',
-    install_requires=['PyGithub'],
+    install_requires=['ipython>=7', 'PyGithub>=1.46'],
 )
