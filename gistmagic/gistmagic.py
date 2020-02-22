@@ -43,6 +43,12 @@ class GistMagic(Magics):
             print("\nLines need to be integer.")
             return
 
+        if n == 0:
+            print("\nCan't go back 0 lines")
+            return
+        elif n == 1:
+            n = 2
+
         SubIn = self.shell.user_ns["In"][-n:]
         Out = self.shell.user_ns["Out"]
         len_in = len(self.shell.user_ns["In"]) - 1
