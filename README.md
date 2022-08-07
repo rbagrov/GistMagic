@@ -19,7 +19,7 @@ This package performs upload to GitHub Gist of last X lines of your Ipython sess
 - You need to install gistmagic
 - GistMagic is extention used only from ipython.
 - Your token is kept in memory and prompted every time gistmagic extention is loaded.
-- Gistmagic will not include in your Gist last X lines that start with In or Out.
+- Gistmagic will not include in your Gist any other lines that the last X lines which start with In or Out.
 - Gistmagic will re-arrange the sequence of In/Out in Gist as this the only snipped you have created in your current ipython session.
 
 

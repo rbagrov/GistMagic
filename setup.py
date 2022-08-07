@@ -33,5 +33,5 @@ setup(
         'Programming Language :: Python :: 3.9',
     ],
     keywords='ipython gist magic',
-    install_requires=['ipython>=7', 'PyGithub>=1.46'],
+    install_requires=['ipython>=7', 'PyGithub>=1.46', 'pyperclip>=1.8.2'],
 )
