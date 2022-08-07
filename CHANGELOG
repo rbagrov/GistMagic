@@ -1,0 +1,9 @@
+vesrion 0.0.2
+- improve documentation
+- test ipython 8
+- test python 3.9
+- add non configuratble copy to clipboard
+- fix adding None Outs
+
+version 0.0.1
+- base
