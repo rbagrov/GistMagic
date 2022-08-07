@@ -11,7 +11,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='gistmagic',
-    version='0.0.1',
+    version='0.0.2',
     description='History to Gist - line magic for Ipython',
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -30,6 +30,7 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
     ],
     keywords='ipython gist magic',
     install_requires=['ipython>=7', 'PyGithub>=1.46'],
